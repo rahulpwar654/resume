@@ -67,6 +67,14 @@ export default function Page() {
 
   const projects: Project[] = [
     {
+      name: "REST API Client – JetBrains Plugin",
+      description: [
+        "Built and published an open-source IntelliJ IDEA plugin on the JetBrains Marketplace.",
+        "Lightweight REST client tool window supporting HTTP methods, headers, body, auth, history, and collections.",
+        "500+ downloads. Licensed under MIT.",
+      ],
+    },
+    {
       name: "Truist Bank Cards API",
       description: [
         "Spring Boot microservices deployed on AWS Lambda.",
@@ -181,7 +189,19 @@ export default function Page() {
 
         {projects.map((project, index) => (
           <div key={index} className="mb-4">
-            <h3 className="font-bold">{project.name}</h3>
+            <h3 className="font-bold">
+              {project.name}
+              {project.name.includes("JetBrains") && (
+                <a
+                  href="https://plugins.jetbrains.com/plugin/28269-rest-api-client"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2 text-sm font-normal text-blue-600 hover:underline"
+                >
+                  View on Marketplace →
+                </a>
+              )}
+            </h3>
 
             <ul className="list-disc ml-6 text-sm">
               {project.description.map((d, i) => (
