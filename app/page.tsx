@@ -4,6 +4,7 @@ type Experience = {
   duration: string;
   details: string[];
 };
+import { Analytics } from "@vercel/analytics/next"
 
 type Project = {
   name: string;
