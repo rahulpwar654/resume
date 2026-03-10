@@ -1,10 +1,11 @@
+import { Analytics } from "@vercel/analytics/next";
+
 type Experience = {
   company: string;
   role: string;
   duration: string;
   details: string[];
 };
-import { Analytics } from "@vercel/analytics/next"
 
 type Project = {
   name: string;
