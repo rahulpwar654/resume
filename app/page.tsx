@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/next";
+import Link from "next/link";
 
 type Experience = {
   company: string;
@@ -200,6 +201,30 @@ export default function Page() {
                 >
                   View on Marketplace →
                 </a>
+              )}
+              {project.name.includes("Truist") && (
+                <Link
+                  href="/projects/truist"
+                  className="ml-2 text-sm font-normal text-blue-600 hover:underline"
+                >
+                  View Details →
+                </Link>
+              )}
+              {project.name.includes("MirAIe") && (
+                <Link
+                  href="/projects/miraie"
+                  className="ml-2 text-sm font-normal text-blue-600 hover:underline"
+                >
+                  View Details →
+                </Link>
+              )}
+              {project.name.includes("100MB") && (
+                <Link
+                  href="/projects/cricket"
+                  className="ml-2 text-sm font-normal text-blue-600 hover:underline"
+                >
+                  View Details →
+                </Link>
               )}
             </h3>
 
